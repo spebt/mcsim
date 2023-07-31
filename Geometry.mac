@@ -1,0 +1,134 @@
+# M A N D A T O R Y
+#####
+/gate/geometry/setMaterialDatabase GateMaterials.db
+
+
+# G E O M E T R Y
+#####
+
+# World
+# Define the world dimensions
+##
+/gate/world/geometry/setXLength 300 mm
+/gate/world/geometry/setYLength 300 mm
+/gate/world/geometry/setZLength 300 mm
+
+
+/gate/world/daughters/name DetectorPanel
+/gate/world/daughters/insert box
+/gate/DetectorPanel/geometry/setXLength 26.88 mm
+/gate/DetectorPanel/geometry/setYLength 107.52 mm
+/gate/DetectorPanel/geometry/setZLength 10. mm
+#/gate/DetectorPanel/placement/setTranslation 111.76 0. 0. mm
+/gate/DetectorPanel/placement/setTranslation 0 0. 0. mm
+/gate/DetectorPanel/setMaterial Air
+/gate/DetectorPanel/repeaters/insert ring
+#/gate/DetectorPanel/ring/setRepeatNumber 6
+/gate/DetectorPanel/ring/setRepeatNumber 1
+/gate/DetectorPanel/vis/setVisible 0
+
+/gate/DetectorPanel/daughters/name     DetectorModule
+/gate/DetectorPanel/daughters/insert   box
+/gate/DetectorModule/geometry/setXLength           26.88 mm
+/gate/DetectorModule/geometry/setYLength           107.52  mm
+/gate/DetectorModule/geometry/setZLength           20. mm
+/gate/DetectorModule/vis/setColor white
+#/gate/DetectorModule/vis/forceSolid
+/gate/DetectorModule/repeaters/insert linear
+/gate/DetectorModule/linear/setRepeatNumber 10
+/gate/DetectorModule/linear/setRepeatVector 0. 0. 20. mm
+/gate/DetectorModule/vis/setVisible 1
+/gate/DetectorModule/setMaterial Air
+
+# Metal Plate
+/gate/DetectorModule/daughters/name     MetalPlate
+/gate/DetectorModule/daughters/insert   box
+/gate/MetalPlate/geometry/setXLength    2. mm
+/gate/MetalPlate/geometry/setYLength    107.52 mm
+/gate/MetalPlate/geometry/setZLength    20. mm
+/gate/MetalPlate/placement/setTranslation  -14.44 0. 0. mm
+/gate/MetalPlate/daughters/name hole
+/gate/MetalPlate/daughters/insert box
+/gate/hole/geometry/setXLength  2. mm
+/gate/hole/geometry/setYLength  4. mm
+/gate/hole/geometry/setZLength  2. mm
+/gate/hole/setMaterial Air
+/gate/hole/vis/forceSolid
+#
+# Repeat the hole in an array
+##
+/gate/hole/repeaters/insert cubicArray
+/gate/hole/cubicArray/setRepeatNumberX 1
+/gate/hole/cubicArray/setRepeatNumberY 21
+/gate/hole/cubicArray/setRepeatNumberZ 5
+/gate/hole/cubicArray/setRepeatVector 0. 5.  4. mm
+
+/gate/MetalPlate/setMaterial Tungsten
+/gate/MetalPlate/vis/setColor blue
+/gate/MetalPlate/vis/forceSolid
+/gate/MetalPlate/vis/setVisible 1
+
+
+
+/gate/DetectorModule/daughters/name     DetectorBlock
+/gate/DetectorModule/daughters/insert   box
+/gate/DetectorBlock/geometry/setXLength           26.88 mm
+/gate/DetectorBlock/geometry/setYLength           26.88 mm
+/gate/DetectorBlock/geometry/setZLength           20. mm
+/gate/DetectorBlock/vis/setColor white
+/gate/DetectorBlock/repeaters/insert linear
+/gate/DetectorBlock/linear/setRepeatNumber 4
+/gate/DetectorBlock/linear/setRepeatVector 0. 26.88 0. mm
+/gate/DetectorBlock/vis/setVisible 0
+
+/gate/DetectorBlock/daughters/name     CrystalCell_1
+/gate/DetectorBlock/daughters/insert   box
+/gate/CrystalCell_1/geometry/setXLength           3. mm
+/gate/CrystalCell_1/geometry/setYLength           2. mm
+/gate/CrystalCell_1/geometry/setZLength           4. mm
+/gate/CrystalCell_1/placement/setTranslation  -1.68 -1.68 0. mm
+/gate/CrystalCell_1/vis/setColor yellow
+/gate/CrystalCell_1/vis/forceSolid
+/gate/CrystalCell_1/repeaters/insert cubicArray
+/gate/CrystalCell_1/cubicArray/setRepeatNumberX  4
+/gate/CrystalCell_1/cubicArray/setRepeatNumberY  4
+/gate/CrystalCell_1/cubicArray/setRepeatNumberZ  5
+/gate/CrystalCell_1/cubicArray/setRepeatVector   6.72 6.72 4  mm
+/gate/CrystalCell_1/daughters/name     SiPM_1
+/gate/CrystalCell_1/daughters/insert   box
+/gate/SiPM_1/geometry/setXLength           3.36 mm
+/gate/SiPM_1/geometry/setYLength           3.36 mm
+/gate/SiPM_1/geometry/setZLength           1. mm
+/gate/SiPM_1/vis/setColor green
+
+/gate/DetectorBlock/daughters/name     CrystalCell_2
+/gate/DetectorBlock/daughters/insert   box
+/gate/CrystalCell_2/geometry/setXLength           3. mm
+/gate/CrystalCell_2/geometry/setYLength           2. mm
+/gate/CrystalCell_2/geometry/setZLength           4. mm
+/gate/CrystalCell_2/placement/setTranslation  1.68 1.68 0. mm
+/gate/CrystalCell_2/vis/setColor yellow
+/gate/CrystalCell_2/vis/forceSolid
+/gate/CrystalCell_2/repeaters/insert cubicArray
+/gate/CrystalCell_2/cubicArray/setRepeatNumberX  4
+/gate/CrystalCell_2/cubicArray/setRepeatNumberY  4
+/gate/CrystalCell_2/cubicArray/setRepeatNumberZ  5
+/gate/CrystalCell_2/cubicArray/setRepeatVector   6.72 6.72 4  mm
+/gate/CrystalCell_2/daughters/name     SiPM_2
+/gate/CrystalCell_2/daughters/insert   box
+/gate/SiPM_2/geometry/setXLength           3.36 mm
+/gate/SiPM_2/geometry/setYLength           3.36 mm
+/gate/SiPM_2/geometry/setZLength           1. mm
+/gate/SiPM_2/vis/setColor green
+
+
+/gate/run/initialize
+#/vis/open OpenGLImmediateQt
+/vis/open OGLSQt
+#/vis/viewer/set/viewpointThetaPhi 60 60
+#/vis/viewer/set/viewpointThetaPhi 60 60
+/vis/viewer/zoom 1.5
+/vis/drawVolume
+/vis/scene/add/axes
+/vis/viewer/flush
+

@@ -1,0 +1,171 @@
+!INTERFILE :=
+!imaging modality := nucmed
+!version of keys := 3.3
+date of keys := 1992:01:01
+;
+!GENERAL DATA :=
+data description := GATE simulation
+!data starting block := 0
+!name of data file := YourProjection.sin
+;
+!GENERAL IMAGE DATA :=
+!type of data := TOMOGRAPHIC
+!total number of images := 60
+study date := 2023:06:20
+study time := 20:10:26
+imagedata byte order := LITTLEENDIAN
+number of energy windows := 1
+;
+energy window [1] := Singles
+energy window lower level [1] := 20
+energy window upper level [1] := 190
+;
+!SPECT STUDY (general) :=
+number of detector heads := 6
+;
+!number of images/energy window := 60
+!process status := Acquired
+!matrix size [1] := 128
+!matrix size [2] := 128
+!number format := unsigned integer
+!number of bytes per pixel := 2
+scaling factor (mm/pixel) [1] := 0.904
+scaling factor (mm/pixel) [2] := 0.904
+!number of projections := 10
+!extent of rotation := 1.5
+!time per projection (sec) := 1
+study duration (sec) := 10
+!maximum pixel count := 1
+;
+!SPECT STUDY (acquired data) :=
+!direction of rotation := CW
+start angle := 0
+first projection angle in data set := 0
+acquisition mode := stepped
+orbit := Circular
+;
+!number of images/energy window := 60
+!process status := Acquired
+!matrix size [1] := 128
+!matrix size [2] := 128
+!number format := unsigned integer
+!number of bytes per pixel := 2
+scaling factor (mm/pixel) [1] := 0.904
+scaling factor (mm/pixel) [2] := 0.904
+!number of projections := 10
+!extent of rotation := 1.5
+!time per projection (sec) := 1
+study duration (sec) := 10
+!maximum pixel count := 1
+;
+!SPECT STUDY (acquired data) :=
+!direction of rotation := CW
+start angle := 60
+first projection angle in data set := 60
+acquisition mode := stepped
+orbit := Circular
+;
+!number of images/energy window := 60
+!process status := Acquired
+!matrix size [1] := 128
+!matrix size [2] := 128
+!number format := unsigned integer
+!number of bytes per pixel := 2
+scaling factor (mm/pixel) [1] := 0.904
+scaling factor (mm/pixel) [2] := 0.904
+!number of projections := 10
+!extent of rotation := 1.5
+!time per projection (sec) := 1
+study duration (sec) := 10
+!maximum pixel count := 1
+;
+!SPECT STUDY (acquired data) :=
+!direction of rotation := CW
+start angle := 120
+first projection angle in data set := 120
+acquisition mode := stepped
+orbit := Circular
+;
+!number of images/energy window := 60
+!process status := Acquired
+!matrix size [1] := 128
+!matrix size [2] := 128
+!number format := unsigned integer
+!number of bytes per pixel := 2
+scaling factor (mm/pixel) [1] := 0.904
+scaling factor (mm/pixel) [2] := 0.904
+!number of projections := 10
+!extent of rotation := 1.5
+!time per projection (sec) := 1
+study duration (sec) := 10
+!maximum pixel count := 1
+;
+!SPECT STUDY (acquired data) :=
+!direction of rotation := CW
+start angle := 180
+first projection angle in data set := 180
+acquisition mode := stepped
+orbit := Circular
+;
+!number of images/energy window := 60
+!process status := Acquired
+!matrix size [1] := 128
+!matrix size [2] := 128
+!number format := unsigned integer
+!number of bytes per pixel := 2
+scaling factor (mm/pixel) [1] := 0.904
+scaling factor (mm/pixel) [2] := 0.904
+!number of projections := 10
+!extent of rotation := 1.5
+!time per projection (sec) := 1
+study duration (sec) := 10
+!maximum pixel count := 1
+;
+!SPECT STUDY (acquired data) :=
+!direction of rotation := CW
+start angle := 240
+first projection angle in data set := 240
+acquisition mode := stepped
+orbit := Circular
+;
+!number of images/energy window := 60
+!process status := Acquired
+!matrix size [1] := 128
+!matrix size [2] := 128
+!number format := unsigned integer
+!number of bytes per pixel := 2
+scaling factor (mm/pixel) [1] := 0.904
+scaling factor (mm/pixel) [2] := 0.904
+!number of projections := 10
+!extent of rotation := 1.5
+!time per projection (sec) := 1
+study duration (sec) := 10
+!maximum pixel count := 1
+;
+!SPECT STUDY (acquired data) :=
+!direction of rotation := CW
+start angle := 300
+first projection angle in data set := 300
+acquisition mode := stepped
+orbit := Circular
+;
+;GATE GEOMETRY :=
+;head x dimension (cm) := 7
+;head y dimension (cm) := 21
+;head z dimension (cm) := 30
+;head material := Air
+;head x translation (cm) := 20
+;head y translation (cm) := 0
+;head z translation (cm) := 0
+;crystal x dimension (cm) := 1
+;crystal y dimension (cm) := 19
+;crystal z dimension (cm) := 28
+;crystal material := NaI
+;
+;GATE SIMULATION :=
+;number of runs := 10
+;
+;GATE SIMULATION :=
+;number of EM events := 0
+;
+!END OF INTERFILE :=
