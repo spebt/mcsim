@@ -113,6 +113,17 @@ GSO: d=6.7 g/cm3; n=3 ; state=Solid
         +el: name=Silicon    ; n=1
         +el: name=Oxygen     ; n=5
 
+YSO: d=4.5 g/cm3; n=3 ; state=Solid
+        +el: name=Yttrium ; n=2
+	+el: name=Silicon; n=1
+	+el: name=Oxygen; n=5
+	
+GAGG: d=6.63 g/cm3; n=4 ; state=Solid
+    +el: name=Gadolinium ; n=3
+	+el: name=Aluminium ; n=2
+	+el: name=Gallium; n=3
+	+el: name=Oxygen; n=12
+        
 LuAP: d=8.34 g/cm3; n=3 ; state=Solid
         +el: name=Lutetium   ; n=1
         +el: name=Aluminium  ; n=1
