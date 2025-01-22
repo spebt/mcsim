@@ -1,0 +1,23 @@
+#=====================================================
+#  D A T A   O U T P U T   
+#=====================================================
+#/gate/output/tree/enable
+#/gate/output/tree/addFileName ./SPEBT_${SLURM_ARRAY_TASK_ID}.npy
+#/gate/output/tree/addFileName ./SPEBT_${SLURM_ARRAY_TASK_ID}.root
+#/gate/output/tree/hits/enable
+#/gate/output/tree/addCollection Singles
+
+
+#=====================================================
+#  D A T A   O U T P U T   
+#=====================================================
+/gate/output/tree/enable
+/gate/output/tree/addFileName /vscratch/grp-rutaoyao/Tridev/SPEBT_${SLURM_ARRAY_TASK_ID}.root
+/gate/output/tree/hits/enable
+/gate/output/tree/addCollection Singles
+
+# Specify the parameters to store for hits
+#/gate/output/tree/hits/setParameterNames posX posY volumeID[2] volumeID[6] eventID
+
+# Specify the parameters to store for source
+#/gate/output/tree/singles/setParameterNames sourcePosX sourcePosY sourcePosZ eventID
