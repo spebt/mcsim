@@ -1,0 +1,933 @@
+# Derenzo phantom source for digimouse
+#
+# 6 sectors of cylindrical rod sources arranged in the X-Z plane,
+# all running parallel to the Y axis (long axis of the mouse).
+# Rods are centred at Y=18mm and span Y=[6,30]mm -- the torso
+# region where the body is consistently >= 12mm wide in X.
+# All rod centres verified to be inside non-air tissue across their
+# full Y extent at Z=0 (central Z slice).
+#
+# Sector layout (rod diameter -> X sector centre):
+#   d=1.0mm: X=-10mm   d=1.5mm: X=-6mm   d=2.0mm: X=-2mm
+#   d=2.5mm: X=+2mm    d=3.0mm: X=+6mm   d=4.0mm: X=+10mm
+#
+# Total rods: 65
+
+# --- d=1.0mm rods (12 rods) ---
+/gate/source/addSource rod0 gps
+/gate/source/rod0/gps/particle gamma
+/gate/source/rod0/gps/ene/type Mono
+/gate/source/rod0/gps/ene/mono 140.0 keV
+/gate/source/rod0/gps/pos/type Volume
+/gate/source/rod0/gps/pos/shape Cylinder
+/gate/source/rod0/gps/pos/radius 0.5 mm
+/gate/source/rod0/gps/pos/halfz 12.0 mm
+# Rod axis is Y -- rotate the GPS cylinder (default axis Z) to point along Y
+/gate/source/rod0/gps/pos/rot1 1 0 0
+/gate/source/rod0/gps/pos/rot2 0 0 1
+/gate/source/rod0/gps/pos/centre -12.0 18.0 -3.464 mm
+/gate/source/rod0/gps/ang/type iso
+/gate/source/rod0/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod1 gps
+/gate/source/rod1/gps/particle gamma
+/gate/source/rod1/gps/ene/type Mono
+/gate/source/rod1/gps/ene/mono 140.0 keV
+/gate/source/rod1/gps/pos/type Volume
+/gate/source/rod1/gps/pos/shape Cylinder
+/gate/source/rod1/gps/pos/radius 0.5 mm
+/gate/source/rod1/gps/pos/halfz 12.0 mm
+/gate/source/rod1/gps/pos/rot1 1 0 0
+/gate/source/rod1/gps/pos/rot2 0 0 1
+/gate/source/rod1/gps/pos/centre -10.0 18.0 -3.464 mm
+/gate/source/rod1/gps/ang/type iso
+/gate/source/rod1/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod2 gps
+/gate/source/rod2/gps/particle gamma
+/gate/source/rod2/gps/ene/type Mono
+/gate/source/rod2/gps/ene/mono 140.0 keV
+/gate/source/rod2/gps/pos/type Volume
+/gate/source/rod2/gps/pos/shape Cylinder
+/gate/source/rod2/gps/pos/radius 0.5 mm
+/gate/source/rod2/gps/pos/halfz 12.0 mm
+/gate/source/rod2/gps/pos/rot1 1 0 0
+/gate/source/rod2/gps/pos/rot2 0 0 1
+/gate/source/rod2/gps/pos/centre -8.0 18.0 -3.464 mm
+/gate/source/rod2/gps/ang/type iso
+/gate/source/rod2/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod3 gps
+/gate/source/rod3/gps/particle gamma
+/gate/source/rod3/gps/ene/type Mono
+/gate/source/rod3/gps/ene/mono 140.0 keV
+/gate/source/rod3/gps/pos/type Volume
+/gate/source/rod3/gps/pos/shape Cylinder
+/gate/source/rod3/gps/pos/radius 0.5 mm
+/gate/source/rod3/gps/pos/halfz 12.0 mm
+/gate/source/rod3/gps/pos/rot1 1 0 0
+/gate/source/rod3/gps/pos/rot2 0 0 1
+/gate/source/rod3/gps/pos/centre -11.0 18.0 -1.732 mm
+/gate/source/rod3/gps/ang/type iso
+/gate/source/rod3/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod4 gps
+/gate/source/rod4/gps/particle gamma
+/gate/source/rod4/gps/ene/type Mono
+/gate/source/rod4/gps/ene/mono 140.0 keV
+/gate/source/rod4/gps/pos/type Volume
+/gate/source/rod4/gps/pos/shape Cylinder
+/gate/source/rod4/gps/pos/radius 0.5 mm
+/gate/source/rod4/gps/pos/halfz 12.0 mm
+/gate/source/rod4/gps/pos/rot1 1 0 0
+/gate/source/rod4/gps/pos/rot2 0 0 1
+/gate/source/rod4/gps/pos/centre -9.0 18.0 -1.732 mm
+/gate/source/rod4/gps/ang/type iso
+/gate/source/rod4/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod5 gps
+/gate/source/rod5/gps/particle gamma
+/gate/source/rod5/gps/ene/type Mono
+/gate/source/rod5/gps/ene/mono 140.0 keV
+/gate/source/rod5/gps/pos/type Volume
+/gate/source/rod5/gps/pos/shape Cylinder
+/gate/source/rod5/gps/pos/radius 0.5 mm
+/gate/source/rod5/gps/pos/halfz 12.0 mm
+/gate/source/rod5/gps/pos/rot1 1 0 0
+/gate/source/rod5/gps/pos/rot2 0 0 1
+/gate/source/rod5/gps/pos/centre -7.0 18.0 -1.732 mm
+/gate/source/rod5/gps/ang/type iso
+/gate/source/rod5/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod6 gps
+/gate/source/rod6/gps/particle gamma
+/gate/source/rod6/gps/ene/type Mono
+/gate/source/rod6/gps/ene/mono 140.0 keV
+/gate/source/rod6/gps/pos/type Volume
+/gate/source/rod6/gps/pos/shape Cylinder
+/gate/source/rod6/gps/pos/radius 0.5 mm
+/gate/source/rod6/gps/pos/halfz 12.0 mm
+/gate/source/rod6/gps/pos/rot1 1 0 0
+/gate/source/rod6/gps/pos/rot2 0 0 1
+/gate/source/rod6/gps/pos/centre -12.0 18.0 0.0 mm
+/gate/source/rod6/gps/ang/type iso
+/gate/source/rod6/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod7 gps
+/gate/source/rod7/gps/particle gamma
+/gate/source/rod7/gps/ene/type Mono
+/gate/source/rod7/gps/ene/mono 140.0 keV
+/gate/source/rod7/gps/pos/type Volume
+/gate/source/rod7/gps/pos/shape Cylinder
+/gate/source/rod7/gps/pos/radius 0.5 mm
+/gate/source/rod7/gps/pos/halfz 12.0 mm
+/gate/source/rod7/gps/pos/rot1 1 0 0
+/gate/source/rod7/gps/pos/rot2 0 0 1
+/gate/source/rod7/gps/pos/centre -10.0 18.0 0.0 mm
+/gate/source/rod7/gps/ang/type iso
+/gate/source/rod7/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod8 gps
+/gate/source/rod8/gps/particle gamma
+/gate/source/rod8/gps/ene/type Mono
+/gate/source/rod8/gps/ene/mono 140.0 keV
+/gate/source/rod8/gps/pos/type Volume
+/gate/source/rod8/gps/pos/shape Cylinder
+/gate/source/rod8/gps/pos/radius 0.5 mm
+/gate/source/rod8/gps/pos/halfz 12.0 mm
+/gate/source/rod8/gps/pos/rot1 1 0 0
+/gate/source/rod8/gps/pos/rot2 0 0 1
+/gate/source/rod8/gps/pos/centre -8.0 18.0 0.0 mm
+/gate/source/rod8/gps/ang/type iso
+/gate/source/rod8/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod9 gps
+/gate/source/rod9/gps/particle gamma
+/gate/source/rod9/gps/ene/type Mono
+/gate/source/rod9/gps/ene/mono 140.0 keV
+/gate/source/rod9/gps/pos/type Volume
+/gate/source/rod9/gps/pos/shape Cylinder
+/gate/source/rod9/gps/pos/radius 0.5 mm
+/gate/source/rod9/gps/pos/halfz 12.0 mm
+/gate/source/rod9/gps/pos/rot1 1 0 0
+/gate/source/rod9/gps/pos/rot2 0 0 1
+/gate/source/rod9/gps/pos/centre -6.0 18.0 0.0 mm
+/gate/source/rod9/gps/ang/type iso
+/gate/source/rod9/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod10 gps
+/gate/source/rod10/gps/particle gamma
+/gate/source/rod10/gps/ene/type Mono
+/gate/source/rod10/gps/ene/mono 140.0 keV
+/gate/source/rod10/gps/pos/type Volume
+/gate/source/rod10/gps/pos/shape Cylinder
+/gate/source/rod10/gps/pos/radius 0.5 mm
+/gate/source/rod10/gps/pos/halfz 12.0 mm
+/gate/source/rod10/gps/pos/rot1 1 0 0
+/gate/source/rod10/gps/pos/rot2 0 0 1
+/gate/source/rod10/gps/pos/centre -9.0 18.0 1.732 mm
+/gate/source/rod10/gps/ang/type iso
+/gate/source/rod10/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod11 gps
+/gate/source/rod11/gps/particle gamma
+/gate/source/rod11/gps/ene/type Mono
+/gate/source/rod11/gps/ene/mono 140.0 keV
+/gate/source/rod11/gps/pos/type Volume
+/gate/source/rod11/gps/pos/shape Cylinder
+/gate/source/rod11/gps/pos/radius 0.5 mm
+/gate/source/rod11/gps/pos/halfz 12.0 mm
+/gate/source/rod11/gps/pos/rot1 1 0 0
+/gate/source/rod11/gps/pos/rot2 0 0 1
+/gate/source/rod11/gps/pos/centre -7.0 18.0 1.732 mm
+/gate/source/rod11/gps/ang/type iso
+/gate/source/rod11/setActivity 0.00000154 Ci
+
+# --- d=1.5mm rods (16 rods) ---
+/gate/source/addSource rod12 gps
+/gate/source/rod12/gps/particle gamma
+/gate/source/rod12/gps/ene/type Mono
+/gate/source/rod12/gps/ene/mono 140.0 keV
+/gate/source/rod12/gps/pos/type Volume
+/gate/source/rod12/gps/pos/shape Cylinder
+/gate/source/rod12/gps/pos/radius 0.75 mm
+/gate/source/rod12/gps/pos/halfz 12.0 mm
+/gate/source/rod12/gps/pos/rot1 1 0 0
+/gate/source/rod12/gps/pos/rot2 0 0 1
+/gate/source/rod12/gps/pos/centre -9.0 18.0 -5.196 mm
+/gate/source/rod12/gps/ang/type iso
+/gate/source/rod12/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod13 gps
+/gate/source/rod13/gps/particle gamma
+/gate/source/rod13/gps/ene/type Mono
+/gate/source/rod13/gps/ene/mono 140.0 keV
+/gate/source/rod13/gps/pos/type Volume
+/gate/source/rod13/gps/pos/shape Cylinder
+/gate/source/rod13/gps/pos/radius 0.75 mm
+/gate/source/rod13/gps/pos/halfz 12.0 mm
+/gate/source/rod13/gps/pos/rot1 1 0 0
+/gate/source/rod13/gps/pos/rot2 0 0 1
+/gate/source/rod13/gps/pos/centre -6.0 18.0 -5.196 mm
+/gate/source/rod13/gps/ang/type iso
+/gate/source/rod13/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod14 gps
+/gate/source/rod14/gps/particle gamma
+/gate/source/rod14/gps/ene/type Mono
+/gate/source/rod14/gps/ene/mono 140.0 keV
+/gate/source/rod14/gps/pos/type Volume
+/gate/source/rod14/gps/pos/shape Cylinder
+/gate/source/rod14/gps/pos/radius 0.75 mm
+/gate/source/rod14/gps/pos/halfz 12.0 mm
+/gate/source/rod14/gps/pos/rot1 1 0 0
+/gate/source/rod14/gps/pos/rot2 0 0 1
+/gate/source/rod14/gps/pos/centre -3.0 18.0 -5.196 mm
+/gate/source/rod14/gps/ang/type iso
+/gate/source/rod14/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod15 gps
+/gate/source/rod15/gps/particle gamma
+/gate/source/rod15/gps/ene/type Mono
+/gate/source/rod15/gps/ene/mono 140.0 keV
+/gate/source/rod15/gps/pos/type Volume
+/gate/source/rod15/gps/pos/shape Cylinder
+/gate/source/rod15/gps/pos/radius 0.75 mm
+/gate/source/rod15/gps/pos/halfz 12.0 mm
+/gate/source/rod15/gps/pos/rot1 1 0 0
+/gate/source/rod15/gps/pos/rot2 0 0 1
+/gate/source/rod15/gps/pos/centre -10.5 18.0 -2.598 mm
+/gate/source/rod15/gps/ang/type iso
+/gate/source/rod15/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod16 gps
+/gate/source/rod16/gps/particle gamma
+/gate/source/rod16/gps/ene/type Mono
+/gate/source/rod16/gps/ene/mono 140.0 keV
+/gate/source/rod16/gps/pos/type Volume
+/gate/source/rod16/gps/pos/shape Cylinder
+/gate/source/rod16/gps/pos/radius 0.75 mm
+/gate/source/rod16/gps/pos/halfz 12.0 mm
+/gate/source/rod16/gps/pos/rot1 1 0 0
+/gate/source/rod16/gps/pos/rot2 0 0 1
+/gate/source/rod16/gps/pos/centre -7.5 18.0 -2.598 mm
+/gate/source/rod16/gps/ang/type iso
+/gate/source/rod16/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod17 gps
+/gate/source/rod17/gps/particle gamma
+/gate/source/rod17/gps/ene/type Mono
+/gate/source/rod17/gps/ene/mono 140.0 keV
+/gate/source/rod17/gps/pos/type Volume
+/gate/source/rod17/gps/pos/shape Cylinder
+/gate/source/rod17/gps/pos/radius 0.75 mm
+/gate/source/rod17/gps/pos/halfz 12.0 mm
+/gate/source/rod17/gps/pos/rot1 1 0 0
+/gate/source/rod17/gps/pos/rot2 0 0 1
+/gate/source/rod17/gps/pos/centre -4.5 18.0 -2.598 mm
+/gate/source/rod17/gps/ang/type iso
+/gate/source/rod17/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod18 gps
+/gate/source/rod18/gps/particle gamma
+/gate/source/rod18/gps/ene/type Mono
+/gate/source/rod18/gps/ene/mono 140.0 keV
+/gate/source/rod18/gps/pos/type Volume
+/gate/source/rod18/gps/pos/shape Cylinder
+/gate/source/rod18/gps/pos/radius 0.75 mm
+/gate/source/rod18/gps/pos/halfz 12.0 mm
+/gate/source/rod18/gps/pos/rot1 1 0 0
+/gate/source/rod18/gps/pos/rot2 0 0 1
+/gate/source/rod18/gps/pos/centre -1.5 18.0 -2.598 mm
+/gate/source/rod18/gps/ang/type iso
+/gate/source/rod18/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod19 gps
+/gate/source/rod19/gps/particle gamma
+/gate/source/rod19/gps/ene/type Mono
+/gate/source/rod19/gps/ene/mono 140.0 keV
+/gate/source/rod19/gps/pos/type Volume
+/gate/source/rod19/gps/pos/shape Cylinder
+/gate/source/rod19/gps/pos/radius 0.75 mm
+/gate/source/rod19/gps/pos/halfz 12.0 mm
+/gate/source/rod19/gps/pos/rot1 1 0 0
+/gate/source/rod19/gps/pos/rot2 0 0 1
+/gate/source/rod19/gps/pos/centre -12.0 18.0 0.0 mm
+/gate/source/rod19/gps/ang/type iso
+/gate/source/rod19/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod20 gps
+/gate/source/rod20/gps/particle gamma
+/gate/source/rod20/gps/ene/type Mono
+/gate/source/rod20/gps/ene/mono 140.0 keV
+/gate/source/rod20/gps/pos/type Volume
+/gate/source/rod20/gps/pos/shape Cylinder
+/gate/source/rod20/gps/pos/radius 0.75 mm
+/gate/source/rod20/gps/pos/halfz 12.0 mm
+/gate/source/rod20/gps/pos/rot1 1 0 0
+/gate/source/rod20/gps/pos/rot2 0 0 1
+/gate/source/rod20/gps/pos/centre -9.0 18.0 0.0 mm
+/gate/source/rod20/gps/ang/type iso
+/gate/source/rod20/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod21 gps
+/gate/source/rod21/gps/particle gamma
+/gate/source/rod21/gps/ene/type Mono
+/gate/source/rod21/gps/ene/mono 140.0 keV
+/gate/source/rod21/gps/pos/type Volume
+/gate/source/rod21/gps/pos/shape Cylinder
+/gate/source/rod21/gps/pos/radius 0.75 mm
+/gate/source/rod21/gps/pos/halfz 12.0 mm
+/gate/source/rod21/gps/pos/rot1 1 0 0
+/gate/source/rod21/gps/pos/rot2 0 0 1
+/gate/source/rod21/gps/pos/centre -6.0 18.0 0.0 mm
+/gate/source/rod21/gps/ang/type iso
+/gate/source/rod21/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod22 gps
+/gate/source/rod22/gps/particle gamma
+/gate/source/rod22/gps/ene/type Mono
+/gate/source/rod22/gps/ene/mono 140.0 keV
+/gate/source/rod22/gps/pos/type Volume
+/gate/source/rod22/gps/pos/shape Cylinder
+/gate/source/rod22/gps/pos/radius 0.75 mm
+/gate/source/rod22/gps/pos/halfz 12.0 mm
+/gate/source/rod22/gps/pos/rot1 1 0 0
+/gate/source/rod22/gps/pos/rot2 0 0 1
+/gate/source/rod22/gps/pos/centre -3.0 18.0 0.0 mm
+/gate/source/rod22/gps/ang/type iso
+/gate/source/rod22/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod23 gps
+/gate/source/rod23/gps/particle gamma
+/gate/source/rod23/gps/ene/type Mono
+/gate/source/rod23/gps/ene/mono 140.0 keV
+/gate/source/rod23/gps/pos/type Volume
+/gate/source/rod23/gps/pos/shape Cylinder
+/gate/source/rod23/gps/pos/radius 0.75 mm
+/gate/source/rod23/gps/pos/halfz 12.0 mm
+/gate/source/rod23/gps/pos/rot1 1 0 0
+/gate/source/rod23/gps/pos/rot2 0 0 1
+/gate/source/rod23/gps/pos/centre 0.0 18.0 0.0 mm
+/gate/source/rod23/gps/ang/type iso
+/gate/source/rod23/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod24 gps
+/gate/source/rod24/gps/particle gamma
+/gate/source/rod24/gps/ene/type Mono
+/gate/source/rod24/gps/ene/mono 140.0 keV
+/gate/source/rod24/gps/pos/type Volume
+/gate/source/rod24/gps/pos/shape Cylinder
+/gate/source/rod24/gps/pos/radius 0.75 mm
+/gate/source/rod24/gps/pos/halfz 12.0 mm
+/gate/source/rod24/gps/pos/rot1 1 0 0
+/gate/source/rod24/gps/pos/rot2 0 0 1
+/gate/source/rod24/gps/pos/centre -7.5 18.0 2.598 mm
+/gate/source/rod24/gps/ang/type iso
+/gate/source/rod24/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod25 gps
+/gate/source/rod25/gps/particle gamma
+/gate/source/rod25/gps/ene/type Mono
+/gate/source/rod25/gps/ene/mono 140.0 keV
+/gate/source/rod25/gps/pos/type Volume
+/gate/source/rod25/gps/pos/shape Cylinder
+/gate/source/rod25/gps/pos/radius 0.75 mm
+/gate/source/rod25/gps/pos/halfz 12.0 mm
+/gate/source/rod25/gps/pos/rot1 1 0 0
+/gate/source/rod25/gps/pos/rot2 0 0 1
+/gate/source/rod25/gps/pos/centre -4.5 18.0 2.598 mm
+/gate/source/rod25/gps/ang/type iso
+/gate/source/rod25/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod26 gps
+/gate/source/rod26/gps/particle gamma
+/gate/source/rod26/gps/ene/type Mono
+/gate/source/rod26/gps/ene/mono 140.0 keV
+/gate/source/rod26/gps/pos/type Volume
+/gate/source/rod26/gps/pos/shape Cylinder
+/gate/source/rod26/gps/pos/radius 0.75 mm
+/gate/source/rod26/gps/pos/halfz 12.0 mm
+/gate/source/rod26/gps/pos/rot1 1 0 0
+/gate/source/rod26/gps/pos/rot2 0 0 1
+/gate/source/rod26/gps/pos/centre -1.5 18.0 2.598 mm
+/gate/source/rod26/gps/ang/type iso
+/gate/source/rod26/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod27 gps
+/gate/source/rod27/gps/particle gamma
+/gate/source/rod27/gps/ene/type Mono
+/gate/source/rod27/gps/ene/mono 140.0 keV
+/gate/source/rod27/gps/pos/type Volume
+/gate/source/rod27/gps/pos/shape Cylinder
+/gate/source/rod27/gps/pos/radius 0.75 mm
+/gate/source/rod27/gps/pos/halfz 12.0 mm
+/gate/source/rod27/gps/pos/rot1 1 0 0
+/gate/source/rod27/gps/pos/rot2 0 0 1
+/gate/source/rod27/gps/pos/centre -3.0 18.0 5.196 mm
+/gate/source/rod27/gps/ang/type iso
+/gate/source/rod27/setActivity 0.00000154 Ci
+
+# --- d=2.0mm rods (15 rods) ---
+/gate/source/addSource rod28 gps
+/gate/source/rod28/gps/particle gamma
+/gate/source/rod28/gps/ene/type Mono
+/gate/source/rod28/gps/ene/mono 140.0 keV
+/gate/source/rod28/gps/pos/type Volume
+/gate/source/rod28/gps/pos/shape Cylinder
+/gate/source/rod28/gps/pos/radius 1.0 mm
+/gate/source/rod28/gps/pos/halfz 12.0 mm
+/gate/source/rod28/gps/pos/rot1 1 0 0
+/gate/source/rod28/gps/pos/rot2 0 0 1
+/gate/source/rod28/gps/pos/centre -6.0 18.0 -6.928 mm
+/gate/source/rod28/gps/ang/type iso
+/gate/source/rod28/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod29 gps
+/gate/source/rod29/gps/particle gamma
+/gate/source/rod29/gps/ene/type Mono
+/gate/source/rod29/gps/ene/mono 140.0 keV
+/gate/source/rod29/gps/pos/type Volume
+/gate/source/rod29/gps/pos/shape Cylinder
+/gate/source/rod29/gps/pos/radius 1.0 mm
+/gate/source/rod29/gps/pos/halfz 12.0 mm
+/gate/source/rod29/gps/pos/rot1 1 0 0
+/gate/source/rod29/gps/pos/rot2 0 0 1
+/gate/source/rod29/gps/pos/centre -2.0 18.0 -6.928 mm
+/gate/source/rod29/gps/ang/type iso
+/gate/source/rod29/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod30 gps
+/gate/source/rod30/gps/particle gamma
+/gate/source/rod30/gps/ene/type Mono
+/gate/source/rod30/gps/ene/mono 140.0 keV
+/gate/source/rod30/gps/pos/type Volume
+/gate/source/rod30/gps/pos/shape Cylinder
+/gate/source/rod30/gps/pos/radius 1.0 mm
+/gate/source/rod30/gps/pos/halfz 12.0 mm
+/gate/source/rod30/gps/pos/rot1 1 0 0
+/gate/source/rod30/gps/pos/rot2 0 0 1
+/gate/source/rod30/gps/pos/centre 2.0 18.0 -6.928 mm
+/gate/source/rod30/gps/ang/type iso
+/gate/source/rod30/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod31 gps
+/gate/source/rod31/gps/particle gamma
+/gate/source/rod31/gps/ene/type Mono
+/gate/source/rod31/gps/ene/mono 140.0 keV
+/gate/source/rod31/gps/pos/type Volume
+/gate/source/rod31/gps/pos/shape Cylinder
+/gate/source/rod31/gps/pos/radius 1.0 mm
+/gate/source/rod31/gps/pos/halfz 12.0 mm
+/gate/source/rod31/gps/pos/rot1 1 0 0
+/gate/source/rod31/gps/pos/rot2 0 0 1
+/gate/source/rod31/gps/pos/centre -8.0 18.0 -3.464 mm
+/gate/source/rod31/gps/ang/type iso
+/gate/source/rod31/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod32 gps
+/gate/source/rod32/gps/particle gamma
+/gate/source/rod32/gps/ene/type Mono
+/gate/source/rod32/gps/ene/mono 140.0 keV
+/gate/source/rod32/gps/pos/type Volume
+/gate/source/rod32/gps/pos/shape Cylinder
+/gate/source/rod32/gps/pos/radius 1.0 mm
+/gate/source/rod32/gps/pos/halfz 12.0 mm
+/gate/source/rod32/gps/pos/rot1 1 0 0
+/gate/source/rod32/gps/pos/rot2 0 0 1
+/gate/source/rod32/gps/pos/centre -4.0 18.0 -3.464 mm
+/gate/source/rod32/gps/ang/type iso
+/gate/source/rod32/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod33 gps
+/gate/source/rod33/gps/particle gamma
+/gate/source/rod33/gps/ene/type Mono
+/gate/source/rod33/gps/ene/mono 140.0 keV
+/gate/source/rod33/gps/pos/type Volume
+/gate/source/rod33/gps/pos/shape Cylinder
+/gate/source/rod33/gps/pos/radius 1.0 mm
+/gate/source/rod33/gps/pos/halfz 12.0 mm
+/gate/source/rod33/gps/pos/rot1 1 0 0
+/gate/source/rod33/gps/pos/rot2 0 0 1
+/gate/source/rod33/gps/pos/centre 0.0 18.0 -3.464 mm
+/gate/source/rod33/gps/ang/type iso
+/gate/source/rod33/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod34 gps
+/gate/source/rod34/gps/particle gamma
+/gate/source/rod34/gps/ene/type Mono
+/gate/source/rod34/gps/ene/mono 140.0 keV
+/gate/source/rod34/gps/pos/type Volume
+/gate/source/rod34/gps/pos/shape Cylinder
+/gate/source/rod34/gps/pos/radius 1.0 mm
+/gate/source/rod34/gps/pos/halfz 12.0 mm
+/gate/source/rod34/gps/pos/rot1 1 0 0
+/gate/source/rod34/gps/pos/rot2 0 0 1
+/gate/source/rod34/gps/pos/centre 4.0 18.0 -3.464 mm
+/gate/source/rod34/gps/ang/type iso
+/gate/source/rod34/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod35 gps
+/gate/source/rod35/gps/particle gamma
+/gate/source/rod35/gps/ene/type Mono
+/gate/source/rod35/gps/ene/mono 140.0 keV
+/gate/source/rod35/gps/pos/type Volume
+/gate/source/rod35/gps/pos/shape Cylinder
+/gate/source/rod35/gps/pos/radius 1.0 mm
+/gate/source/rod35/gps/pos/halfz 12.0 mm
+/gate/source/rod35/gps/pos/rot1 1 0 0
+/gate/source/rod35/gps/pos/rot2 0 0 1
+/gate/source/rod35/gps/pos/centre -10.0 18.0 0.0 mm
+/gate/source/rod35/gps/ang/type iso
+/gate/source/rod35/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod36 gps
+/gate/source/rod36/gps/particle gamma
+/gate/source/rod36/gps/ene/type Mono
+/gate/source/rod36/gps/ene/mono 140.0 keV
+/gate/source/rod36/gps/pos/type Volume
+/gate/source/rod36/gps/pos/shape Cylinder
+/gate/source/rod36/gps/pos/radius 1.0 mm
+/gate/source/rod36/gps/pos/halfz 12.0 mm
+/gate/source/rod36/gps/pos/rot1 1 0 0
+/gate/source/rod36/gps/pos/rot2 0 0 1
+/gate/source/rod36/gps/pos/centre -6.0 18.0 0.0 mm
+/gate/source/rod36/gps/ang/type iso
+/gate/source/rod36/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod37 gps
+/gate/source/rod37/gps/particle gamma
+/gate/source/rod37/gps/ene/type Mono
+/gate/source/rod37/gps/ene/mono 140.0 keV
+/gate/source/rod37/gps/pos/type Volume
+/gate/source/rod37/gps/pos/shape Cylinder
+/gate/source/rod37/gps/pos/radius 1.0 mm
+/gate/source/rod37/gps/pos/halfz 12.0 mm
+/gate/source/rod37/gps/pos/rot1 1 0 0
+/gate/source/rod37/gps/pos/rot2 0 0 1
+/gate/source/rod37/gps/pos/centre -2.0 18.0 0.0 mm
+/gate/source/rod37/gps/ang/type iso
+/gate/source/rod37/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod38 gps
+/gate/source/rod38/gps/particle gamma
+/gate/source/rod38/gps/ene/type Mono
+/gate/source/rod38/gps/ene/mono 140.0 keV
+/gate/source/rod38/gps/pos/type Volume
+/gate/source/rod38/gps/pos/shape Cylinder
+/gate/source/rod38/gps/pos/radius 1.0 mm
+/gate/source/rod38/gps/pos/halfz 12.0 mm
+/gate/source/rod38/gps/pos/rot1 1 0 0
+/gate/source/rod38/gps/pos/rot2 0 0 1
+/gate/source/rod38/gps/pos/centre 2.0 18.0 0.0 mm
+/gate/source/rod38/gps/ang/type iso
+/gate/source/rod38/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod39 gps
+/gate/source/rod39/gps/particle gamma
+/gate/source/rod39/gps/ene/type Mono
+/gate/source/rod39/gps/ene/mono 140.0 keV
+/gate/source/rod39/gps/pos/type Volume
+/gate/source/rod39/gps/pos/shape Cylinder
+/gate/source/rod39/gps/pos/radius 1.0 mm
+/gate/source/rod39/gps/pos/halfz 12.0 mm
+/gate/source/rod39/gps/pos/rot1 1 0 0
+/gate/source/rod39/gps/pos/rot2 0 0 1
+/gate/source/rod39/gps/pos/centre 6.0 18.0 0.0 mm
+/gate/source/rod39/gps/ang/type iso
+/gate/source/rod39/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod40 gps
+/gate/source/rod40/gps/particle gamma
+/gate/source/rod40/gps/ene/type Mono
+/gate/source/rod40/gps/ene/mono 140.0 keV
+/gate/source/rod40/gps/pos/type Volume
+/gate/source/rod40/gps/pos/shape Cylinder
+/gate/source/rod40/gps/pos/radius 1.0 mm
+/gate/source/rod40/gps/pos/halfz 12.0 mm
+/gate/source/rod40/gps/pos/rot1 1 0 0
+/gate/source/rod40/gps/pos/rot2 0 0 1
+/gate/source/rod40/gps/pos/centre -4.0 18.0 3.464 mm
+/gate/source/rod40/gps/ang/type iso
+/gate/source/rod40/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod41 gps
+/gate/source/rod41/gps/particle gamma
+/gate/source/rod41/gps/ene/type Mono
+/gate/source/rod41/gps/ene/mono 140.0 keV
+/gate/source/rod41/gps/pos/type Volume
+/gate/source/rod41/gps/pos/shape Cylinder
+/gate/source/rod41/gps/pos/radius 1.0 mm
+/gate/source/rod41/gps/pos/halfz 12.0 mm
+/gate/source/rod41/gps/pos/rot1 1 0 0
+/gate/source/rod41/gps/pos/rot2 0 0 1
+/gate/source/rod41/gps/pos/centre 0.0 18.0 3.464 mm
+/gate/source/rod41/gps/ang/type iso
+/gate/source/rod41/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod42 gps
+/gate/source/rod42/gps/particle gamma
+/gate/source/rod42/gps/ene/type Mono
+/gate/source/rod42/gps/ene/mono 140.0 keV
+/gate/source/rod42/gps/pos/type Volume
+/gate/source/rod42/gps/pos/shape Cylinder
+/gate/source/rod42/gps/pos/radius 1.0 mm
+/gate/source/rod42/gps/pos/halfz 12.0 mm
+/gate/source/rod42/gps/pos/rot1 1 0 0
+/gate/source/rod42/gps/pos/rot2 0 0 1
+/gate/source/rod42/gps/pos/centre 4.0 18.0 3.464 mm
+/gate/source/rod42/gps/ang/type iso
+/gate/source/rod42/setActivity 0.00000154 Ci
+
+# --- d=2.5mm rods (11 rods) ---
+/gate/source/addSource rod43 gps
+/gate/source/rod43/gps/particle gamma
+/gate/source/rod43/gps/ene/type Mono
+/gate/source/rod43/gps/ene/mono 140.0 keV
+/gate/source/rod43/gps/pos/type Volume
+/gate/source/rod43/gps/pos/shape Cylinder
+/gate/source/rod43/gps/pos/radius 1.25 mm
+/gate/source/rod43/gps/pos/halfz 12.0 mm
+/gate/source/rod43/gps/pos/rot1 1 0 0
+/gate/source/rod43/gps/pos/rot2 0 0 1
+/gate/source/rod43/gps/pos/centre -5.5 18.0 -4.33 mm
+/gate/source/rod43/gps/ang/type iso
+/gate/source/rod43/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod44 gps
+/gate/source/rod44/gps/particle gamma
+/gate/source/rod44/gps/ene/type Mono
+/gate/source/rod44/gps/ene/mono 140.0 keV
+/gate/source/rod44/gps/pos/type Volume
+/gate/source/rod44/gps/pos/shape Cylinder
+/gate/source/rod44/gps/pos/radius 1.25 mm
+/gate/source/rod44/gps/pos/halfz 12.0 mm
+/gate/source/rod44/gps/pos/rot1 1 0 0
+/gate/source/rod44/gps/pos/rot2 0 0 1
+/gate/source/rod44/gps/pos/centre -0.5 18.0 -4.33 mm
+/gate/source/rod44/gps/ang/type iso
+/gate/source/rod44/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod45 gps
+/gate/source/rod45/gps/particle gamma
+/gate/source/rod45/gps/ene/type Mono
+/gate/source/rod45/gps/ene/mono 140.0 keV
+/gate/source/rod45/gps/pos/type Volume
+/gate/source/rod45/gps/pos/shape Cylinder
+/gate/source/rod45/gps/pos/radius 1.25 mm
+/gate/source/rod45/gps/pos/halfz 12.0 mm
+/gate/source/rod45/gps/pos/rot1 1 0 0
+/gate/source/rod45/gps/pos/rot2 0 0 1
+/gate/source/rod45/gps/pos/centre 4.5 18.0 -4.33 mm
+/gate/source/rod45/gps/ang/type iso
+/gate/source/rod45/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod46 gps
+/gate/source/rod46/gps/particle gamma
+/gate/source/rod46/gps/ene/type Mono
+/gate/source/rod46/gps/ene/mono 140.0 keV
+/gate/source/rod46/gps/pos/type Volume
+/gate/source/rod46/gps/pos/shape Cylinder
+/gate/source/rod46/gps/pos/radius 1.25 mm
+/gate/source/rod46/gps/pos/halfz 12.0 mm
+/gate/source/rod46/gps/pos/rot1 1 0 0
+/gate/source/rod46/gps/pos/rot2 0 0 1
+/gate/source/rod46/gps/pos/centre 9.5 18.0 -4.33 mm
+/gate/source/rod46/gps/ang/type iso
+/gate/source/rod46/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod47 gps
+/gate/source/rod47/gps/particle gamma
+/gate/source/rod47/gps/ene/type Mono
+/gate/source/rod47/gps/ene/mono 140.0 keV
+/gate/source/rod47/gps/pos/type Volume
+/gate/source/rod47/gps/pos/shape Cylinder
+/gate/source/rod47/gps/pos/radius 1.25 mm
+/gate/source/rod47/gps/pos/halfz 12.0 mm
+/gate/source/rod47/gps/pos/rot1 1 0 0
+/gate/source/rod47/gps/pos/rot2 0 0 1
+/gate/source/rod47/gps/pos/centre -8.0 18.0 0.0 mm
+/gate/source/rod47/gps/ang/type iso
+/gate/source/rod47/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod48 gps
+/gate/source/rod48/gps/particle gamma
+/gate/source/rod48/gps/ene/type Mono
+/gate/source/rod48/gps/ene/mono 140.0 keV
+/gate/source/rod48/gps/pos/type Volume
+/gate/source/rod48/gps/pos/shape Cylinder
+/gate/source/rod48/gps/pos/radius 1.25 mm
+/gate/source/rod48/gps/pos/halfz 12.0 mm
+/gate/source/rod48/gps/pos/rot1 1 0 0
+/gate/source/rod48/gps/pos/rot2 0 0 1
+/gate/source/rod48/gps/pos/centre -3.0 18.0 0.0 mm
+/gate/source/rod48/gps/ang/type iso
+/gate/source/rod48/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod49 gps
+/gate/source/rod49/gps/particle gamma
+/gate/source/rod49/gps/ene/type Mono
+/gate/source/rod49/gps/ene/mono 140.0 keV
+/gate/source/rod49/gps/pos/type Volume
+/gate/source/rod49/gps/pos/shape Cylinder
+/gate/source/rod49/gps/pos/radius 1.25 mm
+/gate/source/rod49/gps/pos/halfz 12.0 mm
+/gate/source/rod49/gps/pos/rot1 1 0 0
+/gate/source/rod49/gps/pos/rot2 0 0 1
+/gate/source/rod49/gps/pos/centre 2.0 18.0 0.0 mm
+/gate/source/rod49/gps/ang/type iso
+/gate/source/rod49/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod50 gps
+/gate/source/rod50/gps/particle gamma
+/gate/source/rod50/gps/ene/type Mono
+/gate/source/rod50/gps/ene/mono 140.0 keV
+/gate/source/rod50/gps/pos/type Volume
+/gate/source/rod50/gps/pos/shape Cylinder
+/gate/source/rod50/gps/pos/radius 1.25 mm
+/gate/source/rod50/gps/pos/halfz 12.0 mm
+/gate/source/rod50/gps/pos/rot1 1 0 0
+/gate/source/rod50/gps/pos/rot2 0 0 1
+/gate/source/rod50/gps/pos/centre 7.0 18.0 0.0 mm
+/gate/source/rod50/gps/ang/type iso
+/gate/source/rod50/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod51 gps
+/gate/source/rod51/gps/particle gamma
+/gate/source/rod51/gps/ene/type Mono
+/gate/source/rod51/gps/ene/mono 140.0 keV
+/gate/source/rod51/gps/pos/type Volume
+/gate/source/rod51/gps/pos/shape Cylinder
+/gate/source/rod51/gps/pos/radius 1.25 mm
+/gate/source/rod51/gps/pos/halfz 12.0 mm
+/gate/source/rod51/gps/pos/rot1 1 0 0
+/gate/source/rod51/gps/pos/rot2 0 0 1
+/gate/source/rod51/gps/pos/centre -5.5 18.0 4.33 mm
+/gate/source/rod51/gps/ang/type iso
+/gate/source/rod51/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod52 gps
+/gate/source/rod52/gps/particle gamma
+/gate/source/rod52/gps/ene/type Mono
+/gate/source/rod52/gps/ene/mono 140.0 keV
+/gate/source/rod52/gps/pos/type Volume
+/gate/source/rod52/gps/pos/shape Cylinder
+/gate/source/rod52/gps/pos/radius 1.25 mm
+/gate/source/rod52/gps/pos/halfz 12.0 mm
+/gate/source/rod52/gps/pos/rot1 1 0 0
+/gate/source/rod52/gps/pos/rot2 0 0 1
+/gate/source/rod52/gps/pos/centre -0.5 18.0 4.33 mm
+/gate/source/rod52/gps/ang/type iso
+/gate/source/rod52/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod53 gps
+/gate/source/rod53/gps/particle gamma
+/gate/source/rod53/gps/ene/type Mono
+/gate/source/rod53/gps/ene/mono 140.0 keV
+/gate/source/rod53/gps/pos/type Volume
+/gate/source/rod53/gps/pos/shape Cylinder
+/gate/source/rod53/gps/pos/radius 1.25 mm
+/gate/source/rod53/gps/pos/halfz 12.0 mm
+/gate/source/rod53/gps/pos/rot1 1 0 0
+/gate/source/rod53/gps/pos/rot2 0 0 1
+/gate/source/rod53/gps/pos/centre 4.5 18.0 4.33 mm
+/gate/source/rod53/gps/ang/type iso
+/gate/source/rod53/setActivity 0.00000154 Ci
+
+# --- d=3.0mm rods (8 rods) ---
+/gate/source/addSource rod54 gps
+/gate/source/rod54/gps/particle gamma
+/gate/source/rod54/gps/ene/type Mono
+/gate/source/rod54/gps/ene/mono 140.0 keV
+/gate/source/rod54/gps/pos/type Volume
+/gate/source/rod54/gps/pos/shape Cylinder
+/gate/source/rod54/gps/pos/radius 1.5 mm
+/gate/source/rod54/gps/pos/halfz 12.0 mm
+/gate/source/rod54/gps/pos/rot1 1 0 0
+/gate/source/rod54/gps/pos/rot2 0 0 1
+/gate/source/rod54/gps/pos/centre -3.0 18.0 -5.196 mm
+/gate/source/rod54/gps/ang/type iso
+/gate/source/rod54/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod55 gps
+/gate/source/rod55/gps/particle gamma
+/gate/source/rod55/gps/ene/type Mono
+/gate/source/rod55/gps/ene/mono 140.0 keV
+/gate/source/rod55/gps/pos/type Volume
+/gate/source/rod55/gps/pos/shape Cylinder
+/gate/source/rod55/gps/pos/radius 1.5 mm
+/gate/source/rod55/gps/pos/halfz 12.0 mm
+/gate/source/rod55/gps/pos/rot1 1 0 0
+/gate/source/rod55/gps/pos/rot2 0 0 1
+/gate/source/rod55/gps/pos/centre 3.0 18.0 -5.196 mm
+/gate/source/rod55/gps/ang/type iso
+/gate/source/rod55/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod56 gps
+/gate/source/rod56/gps/particle gamma
+/gate/source/rod56/gps/ene/type Mono
+/gate/source/rod56/gps/ene/mono 140.0 keV
+/gate/source/rod56/gps/pos/type Volume
+/gate/source/rod56/gps/pos/shape Cylinder
+/gate/source/rod56/gps/pos/radius 1.5 mm
+/gate/source/rod56/gps/pos/halfz 12.0 mm
+/gate/source/rod56/gps/pos/rot1 1 0 0
+/gate/source/rod56/gps/pos/rot2 0 0 1
+/gate/source/rod56/gps/pos/centre 9.0 18.0 -5.196 mm
+/gate/source/rod56/gps/ang/type iso
+/gate/source/rod56/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod57 gps
+/gate/source/rod57/gps/particle gamma
+/gate/source/rod57/gps/ene/type Mono
+/gate/source/rod57/gps/ene/mono 140.0 keV
+/gate/source/rod57/gps/pos/type Volume
+/gate/source/rod57/gps/pos/shape Cylinder
+/gate/source/rod57/gps/pos/radius 1.5 mm
+/gate/source/rod57/gps/pos/halfz 12.0 mm
+/gate/source/rod57/gps/pos/rot1 1 0 0
+/gate/source/rod57/gps/pos/rot2 0 0 1
+/gate/source/rod57/gps/pos/centre -6.0 18.0 0.0 mm
+/gate/source/rod57/gps/ang/type iso
+/gate/source/rod57/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod58 gps
+/gate/source/rod58/gps/particle gamma
+/gate/source/rod58/gps/ene/type Mono
+/gate/source/rod58/gps/ene/mono 140.0 keV
+/gate/source/rod58/gps/pos/type Volume
+/gate/source/rod58/gps/pos/shape Cylinder
+/gate/source/rod58/gps/pos/radius 1.5 mm
+/gate/source/rod58/gps/pos/halfz 12.0 mm
+/gate/source/rod58/gps/pos/rot1 1 0 0
+/gate/source/rod58/gps/pos/rot2 0 0 1
+/gate/source/rod58/gps/pos/centre 0.0 18.0 0.0 mm
+/gate/source/rod58/gps/ang/type iso
+/gate/source/rod58/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod59 gps
+/gate/source/rod59/gps/particle gamma
+/gate/source/rod59/gps/ene/type Mono
+/gate/source/rod59/gps/ene/mono 140.0 keV
+/gate/source/rod59/gps/pos/type Volume
+/gate/source/rod59/gps/pos/shape Cylinder
+/gate/source/rod59/gps/pos/radius 1.5 mm
+/gate/source/rod59/gps/pos/halfz 12.0 mm
+/gate/source/rod59/gps/pos/rot1 1 0 0
+/gate/source/rod59/gps/pos/rot2 0 0 1
+/gate/source/rod59/gps/pos/centre 6.0 18.0 0.0 mm
+/gate/source/rod59/gps/ang/type iso
+/gate/source/rod59/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod60 gps
+/gate/source/rod60/gps/particle gamma
+/gate/source/rod60/gps/ene/type Mono
+/gate/source/rod60/gps/ene/mono 140.0 keV
+/gate/source/rod60/gps/pos/type Volume
+/gate/source/rod60/gps/pos/shape Cylinder
+/gate/source/rod60/gps/pos/radius 1.5 mm
+/gate/source/rod60/gps/pos/halfz 12.0 mm
+/gate/source/rod60/gps/pos/rot1 1 0 0
+/gate/source/rod60/gps/pos/rot2 0 0 1
+/gate/source/rod60/gps/pos/centre -3.0 18.0 5.196 mm
+/gate/source/rod60/gps/ang/type iso
+/gate/source/rod60/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod61 gps
+/gate/source/rod61/gps/particle gamma
+/gate/source/rod61/gps/ene/type Mono
+/gate/source/rod61/gps/ene/mono 140.0 keV
+/gate/source/rod61/gps/pos/type Volume
+/gate/source/rod61/gps/pos/shape Cylinder
+/gate/source/rod61/gps/pos/radius 1.5 mm
+/gate/source/rod61/gps/pos/halfz 12.0 mm
+/gate/source/rod61/gps/pos/rot1 1 0 0
+/gate/source/rod61/gps/pos/rot2 0 0 1
+/gate/source/rod61/gps/pos/centre 3.0 18.0 5.196 mm
+/gate/source/rod61/gps/ang/type iso
+/gate/source/rod61/setActivity 0.00000154 Ci
+
+# --- d=4.0mm rods (3 rods) ---
+/gate/source/addSource rod62 gps
+/gate/source/rod62/gps/particle gamma
+/gate/source/rod62/gps/ene/type Mono
+/gate/source/rod62/gps/ene/mono 140.0 keV
+/gate/source/rod62/gps/pos/type Volume
+/gate/source/rod62/gps/pos/shape Cylinder
+/gate/source/rod62/gps/pos/radius 2.0 mm
+/gate/source/rod62/gps/pos/halfz 12.0 mm
+/gate/source/rod62/gps/pos/rot1 1 0 0
+/gate/source/rod62/gps/pos/rot2 0 0 1
+/gate/source/rod62/gps/pos/centre -6.0 18.0 0.0 mm
+/gate/source/rod62/gps/ang/type iso
+/gate/source/rod62/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod63 gps
+/gate/source/rod63/gps/particle gamma
+/gate/source/rod63/gps/ene/type Mono
+/gate/source/rod63/gps/ene/mono 140.0 keV
+/gate/source/rod63/gps/pos/type Volume
+/gate/source/rod63/gps/pos/shape Cylinder
+/gate/source/rod63/gps/pos/radius 2.0 mm
+/gate/source/rod63/gps/pos/halfz 12.0 mm
+/gate/source/rod63/gps/pos/rot1 1 0 0
+/gate/source/rod63/gps/pos/rot2 0 0 1
+/gate/source/rod63/gps/pos/centre 2.0 18.0 0.0 mm
+/gate/source/rod63/gps/ang/type iso
+/gate/source/rod63/setActivity 0.00000154 Ci
+
+/gate/source/addSource rod64 gps
+/gate/source/rod64/gps/particle gamma
+/gate/source/rod64/gps/ene/type Mono
+/gate/source/rod64/gps/ene/mono 140.0 keV
+/gate/source/rod64/gps/pos/type Volume
+/gate/source/rod64/gps/pos/shape Cylinder
+/gate/source/rod64/gps/pos/radius 2.0 mm
+/gate/source/rod64/gps/pos/halfz 12.0 mm
+/gate/source/rod64/gps/pos/rot1 1 0 0
+/gate/source/rod64/gps/pos/rot2 0 0 1
+/gate/source/rod64/gps/pos/centre 10.0 18.0 0.0 mm
+/gate/source/rod64/gps/ang/type iso
+/gate/source/rod64/setActivity 0.00000154 Ci
+
+/gate/source/list

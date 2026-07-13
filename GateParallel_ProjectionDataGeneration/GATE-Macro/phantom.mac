@@ -1,0 +1,6 @@
+# ---- Digimouse voxelized phantom ----
+/gate/world/daughters/name              digimouse
+/gate/world/daughters/insert            ImageNestedParametrisedVolume
+/gate/digimouse/geometry/setImage               digimouse.mhd
+/gate/digimouse/geometry/setRangeToMaterialFile digimouse_range.dat
+/gate/digimouse/placement/setTranslation        0. 0. 0. mm

@@ -1,0 +1,52 @@
+# 2D test source for X-Y reconstruction validation.
+# 4 GPS point sources at Z=0, placed at known (X,Y) positions inside tissue.
+# Being point sources at Z=0 they have zero Z extent -- every emitted photon
+# originates at exactly that (X,Y) in the reconstruction plane.
+# After MLEM you should see 4 distinct peaks at:
+#   src0: ( 0,  0) mm -- centre of body
+#   src1: (+6, +10) mm -- upper right torso
+#   src2: (-6, +10) mm -- upper left torso
+#   src3: ( 0, +20) mm -- upper torso midline
+# If any peak is missing or displaced, that directly pinpoints where the
+# system matrix or pipeline has a problem.
+#
+# All 4 positions verified inside non-air tissue at the central Z slice.
+# Equal activity per source so all 4 peaks should appear equally bright.
+
+/gate/source/addSource src0 gps
+/gate/source/src0/gps/particle gamma
+/gate/source/src0/gps/ene/type Mono
+/gate/source/src0/gps/ene/mono 140.0 keV
+/gate/source/src0/gps/pos/type Point
+/gate/source/src0/gps/pos/centre 0. 0. 0. mm
+/gate/source/src0/gps/ang/type iso
+/gate/source/src0/setActivity 0.000025 Ci
+
+/gate/source/addSource src1 gps
+/gate/source/src1/gps/particle gamma
+/gate/source/src1/gps/ene/type Mono
+/gate/source/src1/gps/ene/mono 140.0 keV
+/gate/source/src1/gps/pos/type Point
+/gate/source/src1/gps/pos/centre 6. 10. 0. mm
+/gate/source/src1/gps/ang/type iso
+/gate/source/src1/setActivity 0.000025 Ci
+
+/gate/source/addSource src2 gps
+/gate/source/src2/gps/particle gamma
+/gate/source/src2/gps/ene/type Mono
+/gate/source/src2/gps/ene/mono 140.0 keV
+/gate/source/src2/gps/pos/type Point
+/gate/source/src2/gps/pos/centre -6. 10. 0. mm
+/gate/source/src2/gps/ang/type iso
+/gate/source/src2/setActivity 0.000025 Ci
+
+/gate/source/addSource src3 gps
+/gate/source/src3/gps/particle gamma
+/gate/source/src3/gps/ene/type Mono
+/gate/source/src3/gps/ene/mono 140.0 keV
+/gate/source/src3/gps/pos/type Point
+/gate/source/src3/gps/pos/centre 0. 20. 0. mm
+/gate/source/src3/gps/ang/type iso
+/gate/source/src3/setActivity 0.000025 Ci
+
+/gate/source/list

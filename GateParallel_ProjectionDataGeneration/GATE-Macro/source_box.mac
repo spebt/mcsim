@@ -1,0 +1,21 @@
+# Small box source placed inside the digimouse phantom, centered at world
+# (0,0,0) mm. A 4x4x4 mm box here sits almost entirely in label 12 ("Body"
+# tissue), no Air. This is the "real object" you're measuring -- used for the
+# RUN_TAG=box campaign, which produces projection data (measured counts).
+/gate/source/addSource source1 gps
+
+/gate/source/source1/gps/particle gamma
+/gate/source/source1/gps/ene/type Mono
+/gate/source/source1/gps/ene/mono 140.0 keV
+
+/gate/source/source1/gps/pos/type Volume
+/gate/source/source1/gps/pos/shape Para
+/gate/source/source1/gps/pos/halfx 2. mm
+/gate/source/source1/gps/pos/halfy 2. mm
+/gate/source/source1/gps/pos/halfz 2. mm
+/gate/source/source1/gps/pos/centre 0. 0. 0. mm
+
+/gate/source/source1/gps/ang/type iso
+/gate/source/source1/setActivity 0.0001 Ci
+
+/gate/source/list

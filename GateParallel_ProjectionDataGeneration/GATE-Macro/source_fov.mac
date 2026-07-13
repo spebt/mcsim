@@ -1,0 +1,22 @@
+# FOV-covering box source for system matrix generation. Spans the whole
+# digimouse body (real extent ~X:[-16.75,16.75] Y:[-44.25,44.25]
+# Z:[-10.25,10.25] mm) plus a small margin, sampled UNIFORMLY. Used for the
+# RUN_TAG=fov campaign, which produces the system matrix H.
+# IMPORTANT: halfx/halfy here MUST match xlimit/ylimit in par_sysmatbin.sh.
+/gate/source/addSource source1 gps
+
+/gate/source/source1/gps/particle gamma
+/gate/source/source1/gps/ene/type Mono
+/gate/source/source1/gps/ene/mono 140.0 keV
+
+/gate/source/source1/gps/pos/type Volume
+/gate/source/source1/gps/pos/shape Para
+/gate/source/source1/gps/pos/halfx 20. mm
+/gate/source/source1/gps/pos/halfy 50. mm
+/gate/source/source1/gps/pos/halfz 12. mm
+/gate/source/source1/gps/pos/centre 0. 0. 0. mm
+
+/gate/source/source1/gps/ang/type iso
+/gate/source/source1/setActivity 0.0001 Ci
+
+/gate/source/list
